@@ -11,19 +11,10 @@
 Ao finalizar a instalação, no prompt de comando ou bash, vá até dentro diretório do projeto e digite:
 
 ```bash
-npm install --global gulp-cli
 npm install
 ```
 
 Será instalado o Gulp globalmente, rodas as dependências npm e posteriormente o bower será inicializado e suas dependências também serão instaladas.
-
-**Atenção:** O bower pode dar conflito de versão do angular caso isso ocorra,
-será apresentado uma pergunta no console para qual versão os arquivos devem ser resolvidos
-
-```bash
-Selecione a opção - angular#1.5.7
-Selecione a opção - angular-animate#^1.4.8
-```
 
 Após a instalação completa digite os seguintes comandos para 
 
