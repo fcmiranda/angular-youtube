@@ -69,7 +69,7 @@ gulp.task('clean-code', function () {
 gulp.task('templatecache', ['clean-code'], function () {
     log('Criando Angular template');
 
-    gulp.src(config.htmlTemplates)
+    return gulp.src(config.htmlTemplates)
         .pipe($.minifyHtml({empty: true}))
         .pipe($.angularTemplatecache(
             config.templateCache.file,
