@@ -1,0 +1,25 @@
+<div layout="row" layout-align="start stretch" layout-margin class="video">
+    <div flex>
+        <img class="video-mini" ng-src="{{vm.url}}">
+    </div>
+    <div flex layout="column" layout-align="space-between stretch">
+            <div flex="100">
+                <md-text-float class="md-title flex md-primary">
+                    {{ vm.video.snippet.title | limitTo: 40 }}{{vm.video.snippet.title.length > 40 ? '...' : ''}}
+                </md-text-float>
+            </div>
+            <div flex="100" layout="row" layout-align="start end">
+                <div flex layout="row" layout-align="start center">
+                    <div>
+                        <md-icon aria-label="Views" class="material-icons" >
+                            visibility
+                        </md-icon>
+                    </div>
+                    <div flex="80" flex-offset="5" class="md-caption" >
+                        <span  ng-bind="vm.video.statistics.viewCount | thousandSuffix"></span> views
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+

@@ -1,0 +1,55 @@
+<md-dialog aria-label="Mango (Fruit)">
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <span flex="" class="flex"></span>
+                <md-button class="md-icon-button" aria-label="close" ng-click="cancel()">
+                    <md-icon aria-label="close" class="material-icons">
+                        close
+                    </md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content class="content" layout="row" layout-align="center start">
+            <div flex="80" class="margin-top-10">
+                <div class="video-container">
+                    <vy-video ng-if="!!vm.currentVideo.id" video="vm.currentVideo"></vy-video>
+                </div>
+                <div layout-gt-sm="row" layout-align-gt-sm="start start" layout="column" layout-align="start start"
+                     class="margin-top-10">
+                    <md-card-title flex-gt-sm="70" flex="80">
+                        <md-card-title-text>
+                            <span class="md-title" ng-bind="vm.currentVideo.snippet.title"></span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-actions flex-gt-sm="30" flex="10">
+                        <div layout="row" layout-align="start start">
+                            <md-card-icon-actions class="flex-end">
+                                <md-button class="md-icon-button" aria-label="Views">
+                                    <md-icon aria-label="Views" class="material-icons">
+                                        <md-tooltip md-direction="top">
+                                            <span ng-bind="vm.currentVideo.statistics.viewCount"></span> views
+                                        </md-tooltip>
+                                        visibility
+                                    </md-icon>
+                                </md-button>
+                                <md-button class="md-icon-button" aria-label="publishedAt">
+                                    <md-icon aria-label="publishedAt" class="material-icons">
+                                        <md-tooltip md-direction="top">
+                                            <span>{{vm.currentVideo.snippet.publishedAt | date:"longDate" }}</span>
+                                        </md-tooltip>
+                                        query_builder
+                                    </md-icon>
+                                </md-button>
+                            </md-card-icon-actions>
+                        </div>
+                    </md-card-actions>
+                </div>
+                <md-card-content>
+                    <p ng-bind="vm.currentVideo.snippet.description">
+                    </p>
+                </md-card-content>
+            </div>
+        </md-dialog-content>
+    </form>
+</md-dialog>
