@@ -1,7 +1,7 @@
 module.exports = function () {
     var client = './src/client/';
     var clientApp = client + 'app/';
-    var temp = './.tmp/';
+    var temp = './tmp/';
     var root = './';
     var server = './src/server/';
     var sass = './src/scss/**/*.scss';

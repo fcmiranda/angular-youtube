@@ -6,9 +6,15 @@
 - Instruções de instalação para Linux [neste link](https://nodejs.org/en/download/package-manager)
 - Instruções de instalação para Windows [neste link](http://blog.teamtreehouse.com/install-node-js-npm-windows)
 
-## Instalação das dependências 
+## Instalação das dependências
 
-Ao finalizar a instalação, no prompt de comando ou bash, vá até dentro diretório do projeto e digite:
+ Instalação do Gulp globalmente
+
+```bash
+npm install --global gulp-cli
+```
+
+Ao finalizar a instalação do gulp-cli, no prompt de comando ou bash, vá até dentro diretório do projeto e digite:
 
 ```bash
 npm install

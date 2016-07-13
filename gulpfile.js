@@ -129,7 +129,7 @@ gulp.task('optimize', ['inject', 'fonts', 'images'], function () {
         //injeta os templates cache no template.js e o referencia no index.html
         .pipe($.inject(
             gulp.src(templateCache, {
-                read: true
+                read: false
             }), {
                 starttag: '<!-- inject:templates:js -->'
             }))
