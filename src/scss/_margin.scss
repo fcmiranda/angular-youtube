@@ -1,0 +1,15 @@
+.margin-0 {
+  margin: 0;
+}
+
+$margin-util: margin !default;
+
+@for $i from 1 through 100 {
+  .#{$margin-util}-top-#{$i} {
+    margin-top: 0px + $i;
+  }
+
+  .#{$margin-util}-bottom-#{$i} {
+    margin-bottom: 0px + $i;
+  }
+}

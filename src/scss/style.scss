@@ -1,8 +1,25 @@
+@import 'margin';
+
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
   src: local('Material Icons'), local('MaterialIcons-Regular'), url(../fonts/material.woff2) format('woff2');
+}
+
+@media only screen and (min-width: 0) and (max-width: 960px - 1) {
+  .md-title {
+    font-size:14px;
+  }
+  .md-display-1{
+    font-size:22px;
+  }
+}
+
+@media only screen and (min-width: 0) and (max-width: 600px - 1) {
+  .title-page{
+    display:none;
+  }
 }
 
 .material-icons {
@@ -21,90 +38,39 @@
   -webkit-font-smoothing: antialiased;
 }
 
-
 body div[ui-view] {
   width: 100%;
   padding:20px;
   margin: 0 auto;
 }
 
-// Handle mobile portrait
-@media only screen and (min-width: 0) and (max-width: 960px - 1) and (orientation: portrait) {
-  .md-title {
-    font-size:14px;
-  }
-  .md-display-1{
-    font-size:22px;
-  }
-}
-
-// Handle mobile landscape
-@media only screen and (min-width: 0) and (max-width: 960px - 1) and (orientation: landscape) {
-  .md-title {
-    font-size:14px;
-  }
-  .md-display-1{
-    font-size:22px;
-  }
-}
-
-// Handle mobile landscape
-@media only screen and (min-width: 0) and (max-width: 600px - 1) and (orientation: portrait) {
-  .title-page{
-    display:none;
-  }
-}
-
-.margin-0 {
-  margin: 0;
-}
-
-$margin-util: margin !default;
-
-@for $i from 1 through 100 {
-  .#{$margin-util}-top-#{$i} {
-    margin-top: 0px + $i;
-  }
-
-  .#{$margin-util}-bottom-#{$i} {
-    margin-bottom: 0px + $i;
-  }
-}
-
-//BUTTONS
 button.simple{
   border: 1px solid #DCDCDC;
 }
 
-md-dialog .content{
-  max-width:600px;max-height:510px;
-}
-
-iframe {
-  position: absolute;
-  top:0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-div.video {
-  cursor: pointer;
-}
-
-img.video-mini {
-  width: 100%;
-  height: 100%;
-}
-
-.video-container {
+div.video-container {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 35px;
   height: 0;
   overflow: hidden;
+
+  iframe {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }  
 }
 
-md-card.video-card {
-  height: 535px;
+md-card {
+  div.video {
+    cursor: pointer;
+  }
+
+  img.video-mini {
+    width: 100%;
+    height: 100%;
+  }  
 }
